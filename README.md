@@ -27,4 +27,4 @@ Each haptic is triggered with the corresponding code using `WKInterfaceDevice.cu
 
 1. Clone the repository:
    ``bash
-      git clone https://github.com/andryg98/WatchHapticList.git`
+      git clone https://github.com/andryg98/WatchHapticList.git``
