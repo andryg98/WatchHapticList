@@ -1,21 +1,19 @@
-//
-//  ContentView.swift
-//  WatchHapticList Watch App
-//
-//  Created by Andrea Garau on 05/01/25.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List(WatchHaptic.allCases) { watchHapticItem in
+            Button {
+                performHapticFeedback(for: watchHapticItem)
+            } label: {
+                Text(watchHapticItem.description)
+            }
         }
-        .padding()
+        .listStyle(.carousel)
+    }
+    
+    private func performHapticFeedback(for hapticTypeConvertible: WatchHapticTypeConvertible) {
+        WKInterfaceDevice.current().play(hapticTypeConvertible.asHapticType())
     }
 }
 

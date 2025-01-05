@@ -1,10 +1,3 @@
-//
-//  WatchHapticListApp.swift
-//  WatchHapticList Watch App
-//
-//  Created by Andrea Garau on 05/01/25.
-//
-
 import SwiftUI
 
 @main
